@@ -6,7 +6,8 @@ You will need to get images of dogs from the API at [https://dog.ceo/dog-api/doc
 
 This repository is part of CodeYourFuture's [group projects](https://github.com/CodeYourFuture/group-projects).
 
-![Screenshot of project](screenshot.png)
+![Screenshot of project](screenshot-1.png)
+![Screenshot of project](screenshot-2.png)
 
 ## What you need to do
 
