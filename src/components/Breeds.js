@@ -1,44 +1,3 @@
-//Jude
-/*
-Create a feature branch as a pair for your ticket
-Push that feature branch to be on GitHub
-As a pair, start to think about how you'll solve the problem (you can look at the codebase and make notes)
-If we have time, start working on a solution.
-
-
-fetch breeds API
-create an option for each breed
-user selects a breed  - on change  
-updates the breed in state 
-picture fetched form API based on breed 
-
-fetch data 
-take the response for the server 
-pass json into javaScript 
-Ass array of breeds to state 
-current breed  > all breeds 
-
-hooks accessory functions  
-
-state populated by fetch data
-//
-event.target -  gives you the element that triggered the event.
-event.target.value return the the value of that element e.g. input field
-//Testing React Components
-
-In React, events are SynthenticEvent, a wrapper around the browser’s native event
-export default function Breeds() {
-  useEffect(() => {
-    fetch("https://dog.ceo/dog-api/breeds-list", {
-      mode: `no-cors`,
-      headers: { "Access-Control-Allow-Origin": "*" }
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  });
-
-
-*/
 
 //what use effect and I using here
 import React, { useEffect, useState } from "react";
@@ -49,29 +8,31 @@ export default function Breeds() {
   const [data, setData] = useState([]);
   console.log(data);
 
-  function fetchData() {
+  let dogsArr;
+  //FETCH CALLS  
+  
+  /*Breeds data 1 */
+    useEffect(() => {
     fetch("https://dog.ceo/api/breeds/list/all")
-      //convert to js
-      .then((response) => response.json())
-      // part 1 object.keys every item in the object
-      .then((data) => setData(Object.keys(data.message)))
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }
+        .then((response) => response.json())      
+        .then((data) => {/* part 1 object.keys every item in the object*/
+        setData(Object.keys(data.message))
+      })
+      .catch((error) => console.error("Type of Error:", error ));
+    }, []);
 
-  /*  
+//     const [dogImage, setDogImage] = useState(null);
+//  /* image data 1 */
+//        useEffect(() => {
+//          fetch("https://dog.ceo/api/breeds/image/random")
+//       .then((response) => response.json())      
+//       .then((data) => {/* part 1 object.keys every item in the object*/
+//       setData(Object.keys(data.message))
+//     })
+//     .catch((error) => console.error("Type of Error:", error ));
+//   }, []);
 
- data = an object with key value pairs 
- part 1 Object.keys(data.message) receive data in a format that UI can use 
- part 2 take that array and inject it into the dropdpwn 
- part 3 another fetch request for breed Picture?
-*/
 
-  useEffect(() => {
-    fetchData();
-    // trigger useEffect for the first time, once
-  }, []);
 
   return (
     <div className="Breeds">
@@ -85,10 +46,19 @@ export default function Breeds() {
           ))}
         </select>
       </p>
+      <div>
       <img className="Breeds-image" src="http://via.placeholder.com/300x300" />
+      {/* {dogImage && <img width={"200px"} height={"200px"} src={dogImage}></img>} */}
       <p>
-        <button className="Breeds-button">Show me more!</button>
+        <button className="Breeds-button"
+        
+        
+        
+        >Show me more!</button>
+        {/* <button className="Breeds-button" onClick={handleOnClick}>Show me more!</button> */}
       </p>
+      </div>
+
     </div>
   );
 }
