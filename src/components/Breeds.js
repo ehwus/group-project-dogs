@@ -15,7 +15,7 @@ export default function Breeds() {
         .then((response) => response.json())      
         .then((data) => { 
           const listOfBreeds = Object.keys(data.message)
-          setData(listOfBreeds) /* dot notation  object.keys (message property in this case ) ?  freecodecamp */
+          setData(listOfBreeds) /* dot notation  object.keys (message property in this case ) ?  Freecodecamp */
           const firstBreed = listOfBreeds[0]  /* get first position in the array of breeds*/
           setDogBreed(firstBreed)
       })
@@ -46,7 +46,8 @@ export default function Breeds() {
          onChange={(event) =>  {
 
     const breed = event.target.value 
-    // setDogBreed=(breed)
+
+    setDogBreed(breed)
 
         fetch(`https://dog.ceo/api/breed/${breed}/images/random`)/* New image in response to the onchange event*/
           .then((response) => response.json())      
