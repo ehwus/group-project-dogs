@@ -1,6 +1,8 @@
 import React from "react";
 import "./Dog.css";
 
+
+
 function Dog(props) {
   return (
     <div className="Dog">
