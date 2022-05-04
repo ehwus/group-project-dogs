@@ -65,7 +65,7 @@ export default function Breeds() {
   {/* Show me more! button  */}
       <div>
       {/* <img className="Breeds-image" src="http://via.placeholder.com/300x300" /> */}
-      {dogImage && <img className="Breeds-image" src={dogImage}></img>} {/* new images (breed)  */}      
+      {dogImage && <img className="Breeds-image" src={dogImage} alt="an image of a dog" ></img>} {/* new images (breed)  */}      
       <p>
         <button className="Breeds-button"        
         onClick={() => 

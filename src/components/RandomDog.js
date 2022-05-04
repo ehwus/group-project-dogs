@@ -44,7 +44,7 @@ export default function RandomDog() {  /* RandomDog */
       <div className="RandomDog">
         <h2 className="RandomDog-title">Random Dogs</h2>
         {/* <img className="RandomDog-image" src="http://via.placeholder.com/300x300" /> */}        
-        {dogImage && <img className="RandomDog-image" src={dogImage}></img>} {/* new images (breed) */}
+        {dogImage && <img className="RandomDog-image" src={dogImage} alt="an image of a dog" ></img>} {/* new images (breed) */}
         <p>
 
 
