@@ -1,11 +1,9 @@
-
-//what use effect and I using here
 import React, { useEffect, useState } from "react";
 import "./Breeds.css";
 
-
 export default function Breeds() {
   const [data, setData] = useState([]);   /* All breeds */
+
   const [dogImage, setDogImage] = useState(null); /* image data 1 */
   const [dogBreed, setDogBreed ] = useState(null); /* Breed */
 
@@ -25,7 +23,7 @@ export default function Breeds() {
  
  /* image data 1 */
        useEffect(() => {
-        fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`)/* loading placeholder image  */
+        fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`)/* loading image  */
           .then((response) => response.json())      
           .then((dogImagedata) => { 
           setDogImage(dogImagedata.message)
@@ -40,7 +38,7 @@ export default function Breeds() {
       <h2 className="Breeds-title">Select a Breed</h2>
 
 
-{/* select dropdown  */}      
+  {/* select dropdown  */}      
       <p>
         <select className="Breeds-select" 
          onChange={(event) =>  {
@@ -64,10 +62,10 @@ export default function Breeds() {
       </p>
 
 
-{/* button  */}
+  {/* Show me more! button  */}
       <div>
       {/* <img className="Breeds-image" src="http://via.placeholder.com/300x300" /> */}
-      {dogImage && <img width={"300px"} height={"300px"} src={dogImage}></img>} {/* new images (breed)  */}      
+      {dogImage && <img className="Breeds-image" src={dogImage}></img>} {/* new images (breed)  */}      
       <p>
         <button className="Breeds-button"        
         onClick={() => 
