@@ -3,7 +3,7 @@ import "./Dog.css";
 
 
 
-function Dog(props) {
+export default function Dog(props) {
   return (
     <div className="Dog">
       <img className="Dog-image" src={props.image} />
@@ -14,4 +14,4 @@ function Dog(props) {
   );
 }
 
-export default Dog;
+// export default Dog;
