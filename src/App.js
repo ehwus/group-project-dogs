@@ -16,7 +16,7 @@ export default function App() {
         <h1 className="App-title">Dogs! </h1>
       </header>
       <Favourites />
-      <RandomDog />
+      <RandomDog photos={savedPhotos}/>
       <DogBattle />
       <Breeds />
     </div>

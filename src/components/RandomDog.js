@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./RandomDog.css";
 
-export default function RandomDog() {  /* RandomDog */
+export default function RandomDog(props) {  /* RandomDog */
   const [data, setData] = useState([]);   /* All breeds */
 
   const [dogImage, setDogImage] = useState(null); /* image data 1 */
-  const [dogBreed, setDogBreed ] = useState(null); /* Breed */
+  const [dogBreed, setDogBreed ] = useState(); /* Breed */
 
 
      /* Fetch all the data */
      useEffect(() => {
       fetch("https://dog.ceo/api/breeds/list/all")
-          .then((response) => response.json())      
+          .then((response) => console.log( response.json())
+         )      
           .then((data) => { 
             const listOfBreeds = Object.keys(data.message)
             setData(listOfBreeds) /* dot notation  object.keys (message property in this case ) ?  Freecodecamp */
@@ -35,10 +36,12 @@ export default function RandomDog() {  /* RandomDog */
     }, [dogBreed]); /* effect depends on dogBreed - runs each time?*/
   
 
+const handleSavedPhotos =()=>{
+props.photos.push(dogImage)
+console.log("photos", props.photos)
 
- {/* RandomDog-image button  */}
-//  const breed = event.target.value
- //setDogBreed(breed)
+}
+
 
     return (
       <div className="RandomDog">
@@ -49,21 +52,24 @@ export default function RandomDog() {  /* RandomDog */
 
 
   {/* Save Image  ~   button */}
-          <button className="RandomDog-button"
-          // logic in here           
+          <button className="RandomDog-button" onClick={() =>
+          handleSavedPhotos()
+          }
+          // logic in here  
+          // push the existing array         
           >Save Image</button>
 
 
  {/* RandomDog-image  ~  button */}          
           <button className="RandomDog-button"
-              onClick={() => 
+              onClick={() => {return (
           fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`)/* responding the the onchange event  */
           .then((response) => response.json())      
           .then((dogImagedata) => { 
           setDogImage(dogImagedata.message)
-      console.log(dogImagedata)
-    })}  
-         >Next Dog</button>
+      console.log(dogImagedata)}
+    )  )}
+              }>Next Dog</button>
         </p>
       </div>
     );
