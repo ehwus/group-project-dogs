@@ -12,13 +12,10 @@ export default function RandomDog(props) {  /* RandomDog */
 
 
   {/* Save Image  ~   button */}
-          <button className="RandomDog-button" onClick={() =>
-          handleSavedPhotos()
-          }
-          // logic in here  
-          // push the existing array
-          //app.js          
-          >Save Image</button>
+        <button className="RandomDog-button" 
+          onClick={() =>props.handSavedImage()}
+          >Save Image
+            </button>
 
 
  {/* RandomDog-image  ~  button */}          

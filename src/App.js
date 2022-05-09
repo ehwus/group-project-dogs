@@ -21,9 +21,10 @@ const handleNextImage = () => {
     setDogImage(data.message) 
 
 })
+ .catch((error) => console.error("Type of Error:", error ));
 } 
 
-useEffect(() => { handleNextImage()}, []);
+useEffect(() => {handleNextImage()}, []);
 
 
   return (
@@ -31,12 +32,9 @@ useEffect(() => { handleNextImage()}, []);
       <header className="App-header">
         <h1 className="App-title">Dogs! </h1>
       </header>
+      {/* <Favourites handSavedImage={handleSavedImage} dogImage = {dogImage}/> */}
       <Favourites />
-      <RandomDog handleNextImage={handleNextImage}
-          dogImage = {dogImage}
-
-      />
-      {/* <RandomDog /> */}
+      <RandomDog handleNextImage={handleNextImage} dogImage = {dogImage}/>
       <DogBattle />
       <Breeds />
     </div>
