@@ -13,13 +13,18 @@ export default function RandomDog(props) {  /* RandomDog */
 
   {/* Save Image  ~   button */}
         <button className="RandomDog-button" 
-          onClick={() =>props.handSavedImage()}
-          >Save Image
+        //this is calling the function 
+          // onClick={props.handleSavedImage}>
+          onClick={() => props.handleSavedImage()}>
+          Save Image
             </button>
+
+
 
 
  {/* RandomDog-image  ~  button */}          
           <button className="RandomDog-button"
+          //calling the function here 
               onClick={() => props.handleNextImage()}>
               Next Dog
           </button>
