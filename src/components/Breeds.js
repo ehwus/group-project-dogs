@@ -23,6 +23,8 @@ export default function Breeds() {
       .catch((error) => console.error("Type of Error:", error));
   }, []);
 
+  
+
   /* image data 1 */
   useEffect(() => {
     fetch(`https://dog.ceo/api/breed/${dogBreed}/images/random`) /* loading image  */

@@ -16,11 +16,32 @@ RandomDogs
 ![Screenshot of project](RandomDogs.png)
 - Show a random picture of a dog in the "Random Dogs" panel. When the "Next Dog" button is clicked, show a new random picture of a dog.
 - When the "Save Image" button is clicked, this image should be added to the Saved Photos area.
+    Dependencies: Favorites component - image information 
+    add an image
+
+ My approach
+- Api call in the component  - props??
+
+Background component - 
+- Pass top 5 voted breeds name and number to favorites component (left) - need help with this 
+
 
 DogBattle
 ![Screenshot of project](DogBattle.png)
 - Show two pictures of dogs in the "Choose the best dog" panel. Each picture should come from a different dog breed. 
-- When the user selects a "Best Dog", it should treat it like a "vote" for that dog breed. Display how many "votes" each dog breed gets below the images.
+- When the user selects a "Best Dog", it should treat it like a "vote" for that dog breed. Display how many "votes" each dog breed gets below the images. 
+
+- Dependencies: Favorites component - favorites component votes information 
+ 
+My approach
+- Api call in the component  - no props
+- create a select a breed button  - doing this today 
+- create vote button  - doing this today 
+- Add some vote information - doing this today - may need help with this 
+
+Background component - 
+- Pass top 5 voted breeds name and number to favorites component (left) - need help with this 
+ 
 
 SelectABreed
 ![Screenshot of project](SelectABreed.png)
@@ -28,6 +49,7 @@ SelectABreed
 
 - When the "Show me more!" button is clicked, show another random picture from the breed in the select dropdown.
 Original images 
+    Dependencies: none
 
 
 <!-- ![Screenshot of project](screenshot-1.png)
