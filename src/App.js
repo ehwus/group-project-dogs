@@ -29,14 +29,12 @@ useEffect(() => {
 //2 saved image ------------------------------------------------------
 const handleSavedImage = () => {
 //  console.log("handleSavedImage anything here?")
- console.log(dogImage)
- //update state - to setSavedPhoto 
- //...copy of the dog image 
- // photo 1 and update all the other images with the spread operator  
+//  console.log(dogImage)
+// update state - to setSavedPhoto 
+ //...copy of the dog image with the spread operator 
+ // argument 1 is photo 1, following argument updates the following image   
   setSavedPhotos([...savedPhotos, dogImage])
 }
-
-//4 insert select A Breed aPI call - text ----------------------------   
 
 //3 passing the updated state as props into the components -----------
   return (
@@ -46,7 +44,7 @@ const handleSavedImage = () => {
       </header>
       
       <Favourites savedPhotos={savedPhotos}/>
-      <RandomDog  handleSavedImage ={handleSavedImage} handleNextImage ={handleNextImage}  dogImage = {dogImage}/>
+      <RandomDog  handleSavedImage ={handleSavedImage} handleNextImage ={handleNextImage} dogImage = {dogImage}/>
       <DogBattle handleNextImage ={handleNextImage} />
       <Breeds />
     </div>
