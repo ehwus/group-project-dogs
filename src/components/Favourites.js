@@ -14,8 +14,11 @@ export default function Favourites(props) {
       <div className="Favourites-saved">
         <h2>Saved Photos</h2>
         <div className="Favourites-photos">
-          <img src={props.savedPhotos} alt="an image of a dog"/>
-          {/* <img src={props.secondSavedImage} alt="an image of a dog"/> */}
+        {/* using the spread operator to copy the array App.js */}
+          <img src={props.savedPhotos[0]} alt="an image of a dog"/>
+          {/* additional images  */}
+          <img src={props.savedPhotos[1]} alt="an image of a dog"/>
+          <img src={props.savedPhotos[2]} alt="an image of a dog"/>
           <img src="http://via.placeholder.com/80x80" />
         </div>
       </div>
@@ -23,6 +26,7 @@ export default function Favourites(props) {
   );
 }
  
-
-{/* {savedPhotos && <img  className="Favourites-photos src={props.savedPhotos} alt="an image of a dog"/>} */}
-// {dogImage && <img className="Breeds-image" src={dogImage} alt="an image of a dog" ></img>} {/* new images (breed)  */}      
+/*
+update the placeholder 
+{savedPhotos && <img src={props.savedPhotos[2]} alt="an image of a dog"/>}
+*/
