@@ -8,7 +8,7 @@ export default function Favourites(props) {
   const getPlaceHolder = (num) => {
     return props.savedPhotos[num] !=undefined ?
     //image for first load 
-    props.savedPhotos[num]: "./80x80_trans.png"
+    props.savedPhotos[num]: "./80x80.png"
   }
   
 
