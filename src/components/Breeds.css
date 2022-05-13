@@ -13,9 +13,10 @@
   font-size: 1rem;
 }
 
+/* put the image in a container to manage different heights & auto height */
 .Breeds-image {
   max-width: 300px;
-  height: auto;
+  height: 300px;
   border-radius: 0.5em;
 }
 

@@ -30,7 +30,7 @@
 
 .Favourites-photos img {
   max-width: 80px;
-  height: auto;
+  height: 80px;
   margin-right: 1em;
   margin-bottom: 1em;
   border-radius: 0.5em;
