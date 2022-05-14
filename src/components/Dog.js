@@ -6,7 +6,9 @@ function Dog(props) {
     <div className="Dog">
       <img className="Dog-image" src={props.image} />
       <p>
-        <button className="Dog-button">Best Dog</button>
+        <button onClick={props.handleBestDogImage()} className="Dog-button">
+          Best Dog
+        </button>
       </p>
     </div>
   );
